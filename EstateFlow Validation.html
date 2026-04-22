@@ -1,0 +1,809 @@
+<!-- EstateFlow Validation Landing Page -->
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EstateFlow AI | Autonomous Estate Manager</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "accent-green": "#10b981",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "card-dark": "#1a242f",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: 'Inter', sans-serif;
+          min-height: max(884px, 100dvh);
+        }
+      }
+      .glass-card {
+        background: rgba(26, 36, 47, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .glow-primary {
+        box-shadow: 0 0 20px rgba(19, 127, 236, 0.3);
+      }
+      .glow-green {
+        box-shadow: 0 0 25px rgba(16, 185, 129, 0.2);
+      }
+      input[type='range'] {
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+        cursor: pointer;
+      }
+      input[type='range']::-webkit-slider-runnable-track {
+        background: rgba(255, 255, 255, 0.1);
+        height: 6px;
+        border-radius: 3px;
+      }
+      input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        margin-top: -5px;
+        background-color: #137fec;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(19, 127, 236, 0.5);
+      }
+      details summary::-webkit-details-marker {
+        display: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display selection:bg-primary selection:text-white">
+<nav class="sticky top-0 z-50 px-6 py-4 flex justify-between items-center glass-card border-b border-white/5">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-xl">account_tree</span>
+</div>
+<span class="text-xl font-extrabold tracking-tight">EstateFlow<span class="text-primary">AI</span></span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all">
+        Join Now
+    </button>
+</nav>
+<main class="max-w-md mx-auto px-6 pb-32">
+<section class="pt-12 pb-16 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+            BETA ACCESS NOW OPEN
+        </div>
+<h1 class="text-4xl font-extrabold leading-tight tracking-tight mb-4">
+            The World’s First <br/>
+<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400">Autonomous</span><br/>
+            Estate Manager
+        </h1>
+<p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-xs mx-auto">
+            Let AI handle maintenance, payments, and compliance while you scale your portfolio.
+        </p>
+<div class="space-y-3">
+<input class="w-full bg-card-dark border border-white/10 rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-white" placeholder="Enter your business email" type="email"/>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl glow-primary transition-all flex items-center justify-center gap-2">
+                Get Early Access
+                <span class="material-icons text-sm">arrow_forward</span>
+</button>
+</div>
+</section>
+<section class="py-6 px-4 mb-16 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center gap-4">
+<div class="flex -space-x-3">
+<img alt="Manager 1" class="w-8 h-8 rounded-full border-2 border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgApywcFcBWaz6c9w3WoIgY65PaG7EciLwUPCht8isRSr6OjfdjiuY6ssfRFE0vCoC48g2avEc-CH1uP6dAREVdy2by2PlMsCDl5Q32BGEMx5geVmxGgD44L3GSWPxKS_3RqqbZU-tEigHk9VVbHhNKEFuEh46bh-eo3Krya616eA6UoT10C6M2cAr-4-yHueu-xEINtBR0SvdNyZmfhknMA173K74h4rq2MYcsMaEY3WeSThNVl5pkvRUbhYBo__wWB_3-BNzQR8"/>
+<img alt="Manager 2" class="w-8 h-8 rounded-full border-2 border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOtUBEdyPkaLMCYzHWAH2XH_z1YzKDhI-QSmyJJWuiv-C4b3ZBuKFtBQbUBiXH2Y3z1UetFXAlw5OmEv0MGRmwtXM16uLWIoQ6r4Wz4uxd9zU0c5psUgvBb5QiI6HoamMixqX2rNtRTgWOUA7_XEXNyjZRnI6V74tFKud7al6UlH1Y4gfNIF28Mwq-yw6QqQlayZTUlBOcHvjSLOxNg0F3fFu3cu1_8FJ4SmIZZWixZrkcsYnCxyZwiQF99YuxzE4e6YsNlXOcQr0"/>
+<img alt="Manager 3" class="w-8 h-8 rounded-full border-2 border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVoDe-SS6Oj0K50WV0R87anETxPsBE2Pco_QwlAdZo4Zm1UBrCMO3vyyKbFZjY6CzcY8dmMEf9Ctui7MTqanqm0LoMXY0n11EaFPDzlCchK--hf9UQ24kXpzcTXWJ_TUmvtaMhyd10qLKbWDg02sgqR3GPi507gTMbqZ-85UzBFEyJ5bc53Pa1fAdZKPl_oYKCxfDK7GSvuf75QUAtEoIxcXjVJuQ9n3Fyo2_YnUdY_JdR1ddnX0IgWL-ScVZ3pyV2WaC7HeWKhko"/>
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-primary flex items-center justify-center text-[10px] font-bold text-white">500+</div>
+</div>
+<p class="text-sm font-medium text-slate-300">Property managers joined</p>
+</section>
+<section class="mb-20">
+<div class="text-center mb-8">
+<h2 class="text-2xl font-bold mb-2">Autonomous ROI Calculator</h2>
+<p class="text-slate-400 text-sm">Calculate how much you're losing to manual work.</p>
+</div>
+<div class="glass-card rounded-3xl p-6 glow-green relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-accent-green/10 blur-[50px] rounded-full"></div>
+<div class="space-y-8 mb-10">
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<label class="text-sm font-semibold text-slate-300">Number of Units</label>
+<span class="text-primary font-bold" id="units-val">50</span>
+</div>
+<input class="w-full" id="units-slider" max="500" min="1" oninput="document.getElementById('units-val').innerText = this.value; updateROI();" type="range" value="50"/>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<label class="text-sm font-semibold text-slate-300">Monthly Admin Hours</label>
+<span class="text-primary font-bold" id="hours-val">40</span>
+</div>
+<input class="w-full" id="hours-slider" max="200" min="1" oninput="document.getElementById('hours-val').innerText = this.value; updateROI();" type="range" value="40"/>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-4 mb-8">
+<div class="bg-background-dark/40 rounded-2xl p-5 border border-white/5 text-center">
+<p class="text-xs font-bold text-accent-green uppercase tracking-wider mb-1">Estimated Annual Savings</p>
+<div class="text-4xl font-extrabold text-white tracking-tight" id="savings-display">$24,000</div>
+</div>
+<div class="bg-background-dark/40 rounded-2xl p-5 border border-white/5 text-center">
+<p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">Hours Reclaimed / Year</p>
+<div class="text-4xl font-extrabold text-white tracking-tight" id="hours-display">480h</div>
+</div>
+</div>
+<button class="w-full bg-accent-green hover:bg-accent-green/90 text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2 group">
+                See How AI Does It
+                <span class="material-icons text-sm group-hover:translate-x-1 transition-transform">auto_awesome</span>
+</button>
+</div>
+</section>
+<section class="mb-24 py-12 border-y border-white/5">
+<div class="text-center mb-10">
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.3em] block mb-4">The Manifesto</span>
+<h2 class="text-3xl font-extrabold leading-tight mb-6 italic tracking-tighter">The Future of Living is <span class="text-primary">Autonomous.</span></h2>
+<div class="space-y-4 text-slate-400 text-sm leading-relaxed max-w-xs mx-auto text-center font-light">
+<p>We believe human potential is wasted on repetitive coordination. Real estate isn't just about brick and mortar; it's about the people living within them.</p>
+<p>EstateFlow AI was born from a singular vision: to eliminate the friction of property management through cognitive automation, allowing owners to focus on growth and residents on living.</p>
+</div>
+</div>
+</section>
+<section class="mb-24">
+<div class="flex justify-between items-end mb-8 px-2">
+<div>
+<h2 class="text-2xl font-bold">Insights</h2>
+<p class="text-slate-500 text-xs">Industry trends &amp; AI intelligence</p>
+</div>
+<a class="text-primary text-xs font-bold flex items-center gap-1" href="#">View all <span class="material-icons text-xs">chevron_right</span></a>
+</div>
+<div class="space-y-6">
+<div class="group bg-card-dark rounded-2xl overflow-hidden border border-white/5">
+<div class="h-40 bg-slate-800 relative overflow-hidden">
+<img alt="AI Tech" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq3F0CWcszuHFt9DWJ8A1mHBdFYlF0SD48nWKEc1qLMqaqOlZ5JKBzHXnQIKZUMqt3xYC7kDQwzL9EzQVVMBcH-MWs1wx3iI_kcGaQTookVpSzLhXMJRlETGeoUm79vwYP5aPz5dR4mfdvea2-HGxV2ZXJCMiJsLsRuWYDc92wKn483QrFd78ZJ0ccob_2fuZCE8joym5Ysu2M-S2OMQ6RAAZfBTVEW2FlaEQ7VZOH_U8GpE144MYhsz3Rc42egyS8oXdghLMMWW0"/>
+</div>
+<div class="p-5">
+<span class="text-[10px] font-bold text-accent-green uppercase tracking-widest mb-2 block">AI Trends</span>
+<h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors leading-tight">Predictive Maintenance: How AI anticipates leaks before they happen.</h3>
+<p class="text-slate-400 text-xs mb-4">Learn how sensor fusion and LLMs are saving thousands in water damage.</p>
+<div class="text-slate-500 text-[10px] font-medium uppercase tracking-tighter">5 min read • June 12, 2024</div>
+</div>
+</div>
+<div class="group bg-card-dark rounded-2xl overflow-hidden border border-white/5">
+<div class="h-40 bg-slate-800 relative overflow-hidden">
+<img alt="Luxury Real Estate" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVMYMJqpBXtilBA44gn9t1anSAst0nYdpU6kJVLSo-jWt2kKzdoHyKtdkz6cNOeqR9960SfBcK_TU-rEfqTsNbA-VJAjCU9pU2mScxBKAMs1jaEubzruXf1kAoqzIev9mJNp6Yk1UXJF9cmogwy0B8LMzIjvtNzue8TpBTrrfuyRRY4HJdDyg5Nla0ro669PX6cAiUSS3zpf-upJpX3OQd6XM8zHKaFgiPmDP0oNq89LAwNJgwQLNbKtbURVxTi--Lcd5L7wdoDRI"/>
+</div>
+<div class="p-5">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2 block">Efficiency</span>
+<h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors leading-tight">The 10x Property Manager: Scaling from 50 to 500 units solo.</h3>
+<p class="text-slate-400 text-xs mb-4">The organizational framework used by elite autonomous portfolio owners.</p>
+<div class="text-slate-500 text-[10px] font-medium uppercase tracking-tighter">8 min read • May 28, 2024</div>
+</div>
+</div>
+<div class="group bg-card-dark rounded-2xl overflow-hidden border border-white/5">
+<div class="h-40 bg-slate-800 relative overflow-hidden">
+<img alt="Finance" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO_iOwIFX8EILMbcwP067Lu-lbq4Em_f-a_zU7791zY2K2qS4m4f28Ci7piWgdO_Iu7Gxcc-ITArxIl2OYa7-KFVZva-aF5NxXOwl3pdjUrbXvY0CV-Ym_YrU_elxiQjNw7b7Xm1SKSPa3Of6Qdg25Zv0q1oWCiAB-Bes3ndjskc4QFU1XSK3Kq0RhUJ_3DdPLxkk7XDvP8L_KDtnp7L4MWQkKP5djtgXT6YMEpPLivzm3JMoDIwCfV2p0bjcBrNEiouV2bQcHJzQ"/>
+</div>
+<div class="p-5">
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">Finance</span>
+<h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors leading-tight">Autonomous Accounting: Tax reconciliation at the speed of light.</h3>
+<p class="text-slate-400 text-xs mb-4">Eliminating the end-of-month scramble with real-time audit logs.</p>
+<div class="text-slate-500 text-[10px] font-medium uppercase tracking-tighter">4 min read • May 15, 2024</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-24 px-2">
+<h2 class="text-2xl font-bold mb-8 text-center">Common Inquiries</h2>
+<div class="space-y-3">
+<details class="group glass-card rounded-2xl overflow-hidden border border-white/5">
+<summary class="flex justify-between items-center p-5 cursor-pointer list-none">
+<span class="text-sm font-semibold pr-4">How secure is my property data?</span>
+<span class="material-icons text-primary text-xl group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-5 pb-5 text-xs text-slate-400 leading-relaxed border-t border-white/5 pt-4">
+                    EstateFlow utilizes bank-grade AES-256 encryption. Your data is isolated in private cloud instances and is never used to train public models. We are SOC2 Type II compliant.
+                </div>
+</details>
+<details class="group glass-card rounded-2xl overflow-hidden border border-white/5">
+<summary class="flex justify-between items-center p-5 cursor-pointer list-none">
+<span class="text-sm font-semibold pr-4">Can the AI really hire contractors?</span>
+<span class="material-icons text-primary text-xl group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-5 pb-5 text-xs text-slate-400 leading-relaxed border-t border-white/5 pt-4">
+                    Yes. The AI connects to your preferred vendor list or our vetted network. It manages scheduling, verifies work via photo evidence, and processes payments only after approval criteria are met.
+                </div>
+</details>
+<details class="group glass-card rounded-2xl overflow-hidden border border-white/5">
+<summary class="flex justify-between items-center p-5 cursor-pointer list-none">
+<span class="text-sm font-semibold pr-4">What happens in an emergency?</span>
+<span class="material-icons text-primary text-xl group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-5 pb-5 text-xs text-slate-400 leading-relaxed border-t border-white/5 pt-4">
+                    For life-threatening emergencies, our AI is programmed to immediately provide emergency numbers to tenants while simultaneously notifying you and local emergency services via automated voice-line.
+                </div>
+</details>
+<details class="group glass-card rounded-2xl overflow-hidden border border-white/5">
+<summary class="flex justify-between items-center p-5 cursor-pointer list-none">
+<span class="text-sm font-semibold pr-4">Is it compatible with my current software?</span>
+<span class="material-icons text-primary text-xl group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-5 pb-5 text-xs text-slate-400 leading-relaxed border-t border-white/5 pt-4">
+                    EstateFlow features native integrations with major property management systems. It works as an autonomous layer on top of your existing database.
+                </div>
+</details>
+</div>
+</section>
+<section class="mb-24">
+<div class="bg-primary/5 rounded-3xl p-8 border border-primary/20 relative overflow-hidden">
+<div class="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/20 blur-[80px] rounded-full"></div>
+<div class="mb-10">
+<h2 class="text-2xl font-bold mb-2">Get in Touch</h2>
+<p class="text-slate-400 text-sm">Direct line to the founders for enterprise inquiries.</p>
+</div>
+<form class="space-y-4 mb-10">
+<div class="space-y-4">
+<input class="w-full bg-background-dark/80 border border-white/10 rounded-xl px-4 py-3 text-sm focus:ring-primary focus:border-transparent outline-none text-white" placeholder="Full Name" type="text"/>
+<input class="w-full bg-background-dark/80 border border-white/10 rounded-xl px-4 py-3 text-sm focus:ring-primary focus:border-transparent outline-none text-white" placeholder="Work Email" type="email"/>
+<textarea class="w-full bg-background-dark/80 border border-white/10 rounded-xl px-4 py-3 text-sm focus:ring-primary focus:border-transparent outline-none min-h-[120px] text-white" placeholder="How can we help you scale?"></textarea>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl transition-all shadow-lg" type="button">
+                    Send Message
+                </button>
+</form>
+<div class="pt-8 border-t border-white/5">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4">Direct Line</p>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center border border-white/5">
+<span class="material-icons text-primary text-lg">call</span>
+</div>
+<div>
+<div class="text-xs font-bold text-slate-200">Call Priority Support</div>
+<div class="text-[10px] text-slate-500">+1 (888) EST-FLOW</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center border border-white/5">
+<span class="material-icons text-primary text-lg">mail</span>
+</div>
+<div>
+<div class="text-xs font-bold text-slate-200">Founder Email</div>
+<div class="text-[10px] text-slate-500">founders@estateflow.ai</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-20">
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2 px-2">
+            How AI handles a leak
+            <span class="bg-primary/20 text-primary text-[10px] px-2 py-0.5 rounded-full">LIVE FLOW</span>
+</h2>
+<div class="relative pl-8 space-y-10 before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-0.5 before:bg-gradient-to-b before:from-primary before:to-transparent">
+<div class="relative">
+<div class="absolute -left-[29px] top-1 w-5 h-5 rounded-full bg-primary ring-4 ring-primary/20 flex items-center justify-center">
+<span class="material-icons text-[12px] text-white">check</span>
+</div>
+<div class="p-4 rounded-xl bg-white/5 border border-white/5">
+<div class="text-xs font-bold text-primary mb-1 uppercase tracking-wider">Detection</div>
+<div class="font-bold mb-1">Tenant reports "Kitchen Leak"</div>
+<p class="text-xs text-slate-400">AI analyzes sentiment and severity via natural language processing.</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -left-[29px] top-1 w-5 h-5 rounded-full bg-primary ring-4 ring-primary/20 flex items-center justify-center">
+<span class="material-icons text-[12px] text-white">sync</span>
+</div>
+<div class="p-4 rounded-xl bg-white/5 border border-white/5">
+<div class="text-xs font-bold text-primary mb-1 uppercase tracking-wider">Dispatch</div>
+<div class="font-bold mb-1">Contractor notified automatically</div>
+<p class="text-xs text-slate-400">Plumbers within 5 miles notified. Schedule confirmed in 3 minutes.</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -left-[29px] top-1 w-5 h-5 rounded-full bg-slate-700 ring-4 ring-slate-800 flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-slate-500"></div>
+</div>
+<div class="p-4 rounded-xl bg-white/5 border border-white/5 opacity-60">
+<div class="text-xs font-bold text-slate-500 mb-1 uppercase tracking-wider">Resolution</div>
+<div class="font-bold mb-1">Auto-payment upon verification</div>
+<p class="text-xs text-slate-400">Work order photos verified by AI before funds are released.</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="text-center pt-16 border-t border-white/5">
+<div class="flex items-center justify-center gap-2 mb-8">
+<div class="w-6 h-6 bg-primary/20 rounded flex items-center justify-center">
+<span class="material-icons text-primary text-sm">account_tree</span>
+</div>
+<span class="text-sm font-bold tracking-tight">EstateFlow AI</span>
+</div>
+<div class="flex justify-center flex-wrap gap-x-8 gap-y-4 mb-10 text-xs font-medium text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Vision</a>
+<a class="hover:text-primary transition-colors" href="#">Insights</a>
+<a class="hover:text-primary transition-colors" href="#">Contact</a>
+<a class="hover:text-primary transition-colors text-slate-300" href="#">Privacy Policy</a>
+</div>
+<div class="flex justify-center gap-6 mb-10 text-slate-500">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-icons">public</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-icons">alternate_email</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-icons">share</span></a>
+</div>
+<div class="space-y-2 mb-8">
+<p class="text-[9px] text-slate-600 font-bold uppercase tracking-[0.2em]">
+                © 2024 EstateFlow Technologies Inc.
+            </p>
+<p class="text-[9px] text-slate-700 max-w-xs mx-auto px-6 italic">
+                Disclaimer: Savings estimates are based on industry averages and may vary by portfolio complexity and local labor rates.
+            </p>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8">
+<span class="text-[10px] text-slate-400">Built by</span>
+<span class="text-[10px] font-bold">EstateFlow Labs</span>
+</div>
+</footer>
+</main>
+<div class="fixed bottom-6 left-6 right-6 z-50 pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-full shadow-2xl flex items-center justify-center gap-2 glow-primary">
+            Join Waitlist
+            <span class="material-icons text-sm">rocket_launch</span>
+</button>
+</div>
+</div>
+<script>
+    function updateROI() {
+        const units = parseInt(document.getElementById('units-slider').value);
+        const monthlyHours = parseInt(document.getElementById('hours-slider').value);
+        const annualHours = monthlyHours * 12;
+        const laborSavings = annualHours * 50; 
+        const efficiencyBonus = units * 120; 
+        const totalSavings = laborSavings + efficiencyBonus;
+        document.getElementById('savings-display').innerText = '$' + totalSavings.toLocaleString();
+        document.getElementById('hours-display').innerText = Math.round(annualHours * 0.8) + 'h';
+    }
+    // Initial call
+    updateROI();
+</script>
+
+</body></html>
+
+<!-- Privacy Policy Details -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      -webkit-tap-highlight-color: transparent;
+      scrollbar-width: none;
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 antialiased selection:bg-primary/30">
+<!-- iOS Status Bar Spacer -->
+<div class="h-12 w-full bg-background-light dark:bg-background-dark sticky top-0 z-50"></div>
+<!-- Navigation Header -->
+<nav class="sticky top-12 z-50 px-6 py-4 flex items-center justify-between bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<button class="w-10 h-10 flex items-center justify-start text-slate-600 dark:text-slate-400">
+<span class="material-icons-round">arrow_back_ios</span>
+</button>
+<h1 class="text-lg font-semibold tracking-tight">Privacy Policy</h1>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary/10 text-primary font-medium text-sm border border-primary/20">
+<span class="material-icons-round text-lg">download</span>
+<span>PDF</span>
+</button>
+</nav>
+<main class="px-6 pb-24 pt-6 space-y-8">
+<!-- Title Section -->
+<header class="space-y-2">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white leading-tight">Privacy &amp; Data Protection</h2>
+<div class="flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-slate-500 dark:text-slate-500">
+<span class="material-icons-round text-xs">history</span>
+<span>Last Updated: October 24, 2023</span>
+</div>
+</header>
+<!-- Summary Card (Summary for Humans) -->
+<section class="glass-card rounded-xl p-5 border-l-4 border-l-primary">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-icons-round text-primary">auto_awesome</span>
+<h3 class="font-bold text-slate-900 dark:text-white">Summary for Humans</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex gap-3 text-sm leading-relaxed">
+<span class="material-icons-round text-primary text-sm mt-0.5">check_circle</span>
+<p><span class="font-semibold text-slate-900 dark:text-white">Data Sovereignty:</span> We never sell your personal information or estate data to third parties.</p>
+</li>
+<li class="flex gap-3 text-sm leading-relaxed">
+<span class="material-icons-round text-primary text-sm mt-0.5">check_circle</span>
+<p><span class="font-semibold text-slate-900 dark:text-white">Encryption:</span> All tenant communications are encrypted end-to-end and processed locally where possible.</p>
+</li>
+<li class="flex gap-3 text-sm leading-relaxed">
+<span class="material-icons-round text-primary text-sm mt-0.5">check_circle</span>
+<p><span class="font-semibold text-slate-900 dark:text-white">AI Isolation:</span> Our AI models are trained on anonymized data sets to ensure no private info is leaked.</p>
+</li>
+</ul>
+</section>
+<!-- Content Sections -->
+<div class="space-y-10">
+<!-- Section: Data Collection -->
+<section class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-icons-round text-primary text-lg">database</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Data Collection</h3>
+</div>
+<div class="prose prose-sm prose-invert text-slate-600 dark:text-slate-400 space-y-3 leading-relaxed">
+<p>EstateFlow AI collects information necessary to automate your property management workflows. This includes property addresses, rental agreements, and maintenance histories.</p>
+<p>We also collect technical data such as IP addresses and device identifiers to maintain platform security and provide localized AI responses.</p>
+</div>
+</section>
+<div class="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+<!-- Section: AI Security -->
+<section class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-icons-round text-primary text-lg">security</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">AI Security</h3>
+</div>
+<div class="prose prose-sm prose-invert text-slate-600 dark:text-slate-400 space-y-3 leading-relaxed">
+<p>Our autonomous processing engine utilizes "Zero-Knowledge" architecture. When the AI analyzes tenant requests or lease documents, the underlying sensitive data is scrubbed before processing in our secure cloud nodes.</p>
+<div class="p-4 rounded-lg bg-primary/5 border border-primary/10 italic text-xs">
+            "We prioritize local edge computing for initial data parsing to minimize cloud exposure."
+          </div>
+</div>
+</section>
+<div class="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+<!-- Section: Tenant Privacy -->
+<section class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-icons-round text-primary text-lg">person_search</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Tenant Privacy</h3>
+</div>
+<div class="prose prose-sm prose-invert text-slate-600 dark:text-slate-400 space-y-3 leading-relaxed">
+<p>We recognize the sensitivity of tenant-landlord relationships. Tenant contact details are stored in encrypted silos. EstateFlow AI only accesses communication history to resolve specific support tickets or maintenance requests as authorized by the property manager.</p>
+</div>
+</section>
+<div class="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+<!-- Section: Compliance -->
+<section class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-icons-round text-primary text-lg">gavel</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Compliance</h3>
+</div>
+<div class="prose prose-sm prose-invert text-slate-600 dark:text-slate-400 space-y-3 leading-relaxed">
+<p>EstateFlow AI is fully compliant with global data protection standards, including:</p>
+<div class="grid grid-cols-2 gap-3 pt-2">
+<div class="bg-background-light dark:bg-white/5 p-3 rounded-lg flex items-center gap-2">
+<span class="material-icons-round text-primary text-sm">verified_user</span>
+<span class="text-xs font-semibold">GDPR</span>
+</div>
+<div class="bg-background-light dark:bg-white/5 p-3 rounded-lg flex items-center gap-2">
+<span class="material-icons-round text-primary text-sm">verified_user</span>
+<span class="text-xs font-semibold">CCPA</span>
+</div>
+<div class="bg-background-light dark:bg-white/5 p-3 rounded-lg flex items-center gap-2">
+<span class="material-icons-round text-primary text-sm">verified_user</span>
+<span class="text-xs font-semibold">SOC2 Type II</span>
+</div>
+<div class="bg-background-light dark:bg-white/5 p-3 rounded-lg flex items-center gap-2">
+<span class="material-icons-round text-primary text-sm">verified_user</span>
+<span class="text-xs font-semibold">ISO 27001</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Contact Section -->
+<footer class="pt-10 space-y-6">
+<div class="bg-primary/10 rounded-xl p-6 text-center space-y-3">
+<h4 class="font-bold text-slate-900 dark:text-white">Have questions?</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Our Data Protection Officer is ready to help you with any privacy concerns.</p>
+<a class="inline-block text-primary font-semibold text-sm hover:underline" href="mailto:privacy@estateflow.ai">privacy@estateflow.ai</a>
+</div>
+<div class="flex flex-col items-center gap-4 py-8">
+<div class="w-12 h-1 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest font-medium">EstateFlow AI v2.4.0</p>
+</div>
+</footer>
+</main>
+<!-- Navigation Bar (iOS style bottom) -->
+<div class="fixed bottom-0 left-0 right-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-xl border-t border-primary/10 px-8 py-4 flex justify-between items-center z-50">
+<button class="text-slate-400">
+<span class="material-icons-round">home</span>
+</button>
+<button class="text-slate-400">
+<span class="material-icons-round">analytics</span>
+</button>
+<button class="text-primary">
+<span class="material-icons-round">security</span>
+</button>
+<button class="text-slate-400">
+<span class="material-icons-round">settings</span>
+</button>
+</div>
+<!-- iOS Home Indicator -->
+<div class="fixed bottom-0 left-0 right-0 h-8 flex justify-center items-end pb-2 pointer-events-none z-[60]">
+<div class="w-32 h-1 bg-slate-400/30 rounded-full"></div>
+</div>
+</body></html>
+
+<!-- Premium Blog Article View -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-morphism {
+            background: rgba(16, 25, 34, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(19, 127, 236, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary/30">
+<!-- Reading Progress Bar -->
+<div class="fixed top-0 left-0 w-full h-1 z-50 bg-background-dark/20">
+<div class="h-full bg-primary" style="width: 35%;"></div>
+</div>
+<!-- Top Navigation (Mobile) -->
+<nav class="fixed top-0 w-full z-40 px-6 py-4 flex justify-between items-center transition-all">
+<button class="w-10 h-10 rounded-full glass-morphism flex items-center justify-center text-white">
+<span class="material-icons text-xl">arrow_back</span>
+</button>
+<div class="flex gap-3">
+<button class="w-10 h-10 rounded-full glass-morphism flex items-center justify-center text-white">
+<span class="material-icons text-xl">bookmark_border</span>
+</button>
+<button class="w-10 h-10 rounded-full glass-morphism flex items-center justify-center text-white">
+<span class="material-icons text-xl">ios_share</span>
+</button>
+</div>
+</nav>
+<!-- Hero Header -->
+<header class="relative w-full h-[60vh] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern high-tech architectural building exterior at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7ZBn7z2S-OdV6GDEXTzv14d5Eb60a5O46KUN6joqbc0vrHF6Opw6UBZJXUKNqLeUi_VKC95TE8inDcSJKzEvGRruOLFmG3nXKqZ_Ua8cS-wtR3GYnFmn7CrKYJqtcojYHAeLZQomCLCJNfbfXDaVOWvhPzwrsEBeQp2HRPr_F8rnXAX5CktKnHy4N2c2wzmU8JTlzGqsLF-iE4KYo78t0OQFo7Il7F1JxgAdu39K9swuRpOnljyhUTzZ7LUEjTSgw48a8wZR2hsA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 space-y-4">
+<span class="inline-block px-3 py-1 bg-primary text-white text-xs font-semibold tracking-wider uppercase rounded-full">
+                AI Strategy
+            </span>
+<h1 class="text-4xl md:text-5xl font-semibold leading-tight text-white max-w-2xl">
+                How AI is Reducing Vacancy Rates by 40%
+            </h1>
+<div class="flex items-center gap-4 text-slate-300">
+<img class="w-10 h-10 rounded-full border border-primary/30" data-alt="Professional portrait of a female executive" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrj5Z1R5VG2FYosdA15m3wTHLT4orHyhQrGBVysqeOQE9Ur90DLIXw7QzdFVBBmtiPRjoEHSt_Dy3_8EXk3asqZqgA2yHG4_iuKaw6nQ2CAK242pYXDOEpeohaUWw7GVeCjva24aTyeuQB1rjwcduVw4H5-21iMO0Wvr0jS0MuPmWtmlu6MTiZtclnWndT6LhcUDik4JA006gUoPveHnuj-Mc8TtevetbmS2KrsjvvZ6ZLStyFo8rRSEVVlcFw3cchMU6nlvG8iX8"/>
+<div class="text-sm">
+<p class="font-medium text-white">Sarah Jenkins</p>
+<p class="opacity-75">Oct 24, 2023 • 5 min read</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-screen-md mx-auto px-6 py-10 space-y-8">
+<!-- Lead Paragraph -->
+<p class="text-xl md:text-2xl leading-relaxed italic text-primary/90">
+            In the rapidly evolving landscape of real estate, the integration of artificial intelligence is no longer a luxury—it's a fundamental necessity for staying competitive in an increasingly automated market.
+        </p>
+<!-- Body Text -->
+<div class="prose dark:prose-invert prose-slate max-w-none space-y-6 text-lg leading-loose opacity-90">
+<p>
+                Property management has traditionally been a reactive industry. Managers often wait for a tenant to give notice before beginning the search for a replacement. However, EstateFlow AI is flipping this script by utilizing predictive analytics to forecast vacancy long before it happens.
+            </p>
+<h2 class="text-2xl font-semibold text-white mt-12 mb-4">The Power of Predictive Analytics</h2>
+<p>
+                By analyzing thousands of data points—including local economic shifts, tenant engagement patterns, and seasonal market trends—our AI models can predict with high accuracy which tenants are likely to renew and which are considering a move. This 60-day head start allows managers to initiate retention strategies or begin pre-marketing efforts.
+            </p>
+</div>
+<!-- Key Takeaway Callout -->
+<aside class="relative overflow-hidden bg-primary/10 border-l-4 border-primary p-6 rounded-r-xl my-10">
+<div class="flex gap-4">
+<span class="material-icons text-primary text-3xl opacity-50">insights</span>
+<div class="space-y-2">
+<h4 class="font-bold text-primary uppercase text-xs tracking-widest">Key Takeaway</h4>
+<p class="text-lg font-medium leading-snug">
+                        AI predictive modeling allows managers to identify 'at-risk' tenants 60 days before lease expiry, providing a crucial window for intervention.
+                    </p>
+</div>
+</div>
+</aside>
+<div class="prose dark:prose-invert prose-slate max-w-none space-y-6 text-lg leading-loose opacity-90">
+<p>
+                The results are staggering. Early adopters of the EstateFlow ecosystem have reported a consistent 40% reduction in vacancy durations. When a property doesn't sit empty, the ROI for the landlord increases exponentially, while the stress on property teams decreases.
+            </p>
+<p>
+                Beyond just finding tenants, the AI assists in "optimal pricing strategies." By dynamically adjusting rent prices based on real-time neighborhood demand, properties are priced to move without leaving money on the table.
+            </p>
+</div>
+<!-- Social Share Bar -->
+<div class="flex items-center justify-center gap-6 py-12 border-y border-white/10 mt-16">
+<span class="text-sm font-semibold uppercase tracking-widest opacity-50">Share Insight</span>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full flex items-center justify-center bg-white/5 hover:bg-primary/20 transition-colors">
+<span class="material-icons text-xl">facebook</span>
+</button>
+<button class="w-12 h-12 rounded-full flex items-center justify-center bg-white/5 hover:bg-primary/20 transition-colors">
+<span class="material-icons text-xl">alternate_email</span>
+</button>
+<button class="w-12 h-12 rounded-full flex items-center justify-center bg-white/5 hover:bg-primary/20 transition-colors">
+<span class="material-icons text-xl">link</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Related Articles Section -->
+<section class="bg-primary/5 py-16 pb-32 px-6">
+<div class="max-w-screen-md mx-auto">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="text-3xl font-semibold text-white">Next for You</h3>
+<p class="text-slate-400">Continue your journey into property tech</p>
+</div>
+<button class="text-primary font-medium flex items-center gap-1 group">
+                    View All <span class="material-icons text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Horizontal Carousel -->
+<div class="flex gap-6 overflow-x-auto hide-scrollbar -mx-6 px-6 pb-4">
+<!-- Related Card 1 -->
+<div class="min-w-[280px] w-[280px] flex-shrink-0 group">
+<div class="relative h-48 rounded-xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Digital graphs and data visualizations on a dark screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPuUUVo7mRA7QP8DGSyyynTFP8oLasmRVvZp4fvCyU9khTIXQ6G0vUKFrkaSF2XS0nNb6-QkTJV8p-xMXKvjpMWN1ugPCbsZTTLhAZQMDCUMVa-edcM-o9PhopPL7rjZvVdEAaGS4ewlrOQ8ae1w_Pp64CdXpZQwLqCU4eFTb65B4s_b4KLcHyiEqIrYy15s8gv7PlkwGcv7qgMtFuam4y2M-5mvUp2IGJGcbmvj-Z0YTnRsIVzpTyOZhBNCqiyd0ZgZAd0JAST3o"/>
+<div class="absolute inset-0 bg-background-dark/30"></div>
+</div>
+<span class="text-xs font-bold text-primary uppercase">Optimization</span>
+<h4 class="text-lg font-medium leading-tight mt-1 text-white">The Future of Dynamic Rent Pricing</h4>
+</div>
+<!-- Related Card 2 -->
+<div class="min-w-[280px] w-[280px] flex-shrink-0 group">
+<div class="relative h-48 rounded-xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Financial data analytics dashboard on a screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2E3sha-LBeuUtJ7oXaeS6XLOHGkcJ8N0nE1U404vyBrmsVH7irOoIfgJx15p_98XxnrlYlfExFEDtIV7_NyabLr_QxxbbxWob6PFI4tgPyg8_MEIuJKsLFuoKfarPBSNDdhdrwQjdcO7czxZzRoH1FZ3ewHGq6Yv2bO3P0WSAziLNURk4JUfX8DVsx8t_XSr-aIBI8AVrMrvyqSauMzV0N3Glua5zd_SGI5vfihT5p4nkmavnzEKrrQkjVaxXfKmglfl62YDPlxI"/>
+<div class="absolute inset-0 bg-background-dark/30"></div>
+</div>
+<span class="text-xs font-bold text-primary uppercase">Risk Management</span>
+<h4 class="text-lg font-medium leading-tight mt-1 text-white">Mitigating Tenant Risk with Neural Nets</h4>
+</div>
+<!-- Related Card 3 -->
+<div class="min-w-[280px] w-[280px] flex-shrink-0 group">
+<div class="relative h-48 rounded-xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Server racks in a data center with blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Jle93GDHg_DKn1mLSbm9SGtu5-MlTtXZ_gy4O_6YNKlB2hp70qGroJwd1EU_XHphTEQxp_BLO482Vlhdf-DLlYaBO-giCgneFLk5eLi6hN6EDWdwq_KKTXD_ikYjxwuDvxNEQ6Gol1VQJtTtqWz8oTMSdf4521lScXYKyas_mm1qLb1Pt42rpUWJST4dY2oEiL6P5XhLlclVt_8qtF_MOqn1y-jMmdV_79jW6go15rS5XXACPsehPtHy-CvsNCTFK1-CwsFifAY"/>
+<div class="absolute inset-0 bg-background-dark/30"></div>
+</div>
+<span class="text-xs font-bold text-primary uppercase">Tech Infrastructure</span>
+<h4 class="text-lg font-medium leading-tight mt-1 text-white">Scaling Property Data for the Enterprise</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Floating Subscribe CTA -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-md z-50">
+<div class="glass-morphism rounded-2xl p-4 flex items-center justify-between shadow-2xl shadow-primary/20 border border-white/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
+<span class="material-icons">mail</span>
+</div>
+<div>
+<p class="text-sm font-bold text-white leading-none">Weekly Insights</p>
+<p class="text-xs text-slate-400 mt-1">Get the latest AI reports</p>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all">
+                Join Free
+            </button>
+</div>
+</div>
+<!-- Bottom Padding for iOS Home Indicator -->
+<div class="h-20 bg-background-dark"></div>
+</body></html>
