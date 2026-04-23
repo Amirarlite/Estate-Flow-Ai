@@ -1,0 +1,105 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: estate-manager
+  namespace: default
+  labels:
+    app: estate-manager
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: estate-manager
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: estate-manager
+      annotations:
+        # Alibaba Cloud Log Service annotation
+        aliyun_logs_stdout: "stdout"
+        aliyun_logs_app: "/var/log/app/*.log"
+    spec:
+      containers:
+        - name: estate-manager
+          image: registry.cn-hangzhou.aliyuncs.com/YOUR_NAMESPACE/estate-manager:latest
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: estate-manager-config
+            - secretRef:
+                name: estate-manager-secret
+          env:
+            # Override with pod-specific values if needed
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+            limits:
+              cpu: "2000m"
+              memory: "2Gi"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 3
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 0
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 30
+          volumeMounts:
+            - name: tmp-volume
+              mountPath: /tmp
+            - name: log-volume
+              mountPath: /var/log/app
+      volumes:
+        - name: tmp-volume
+          emptyDir: {}
+        - name: log-volume
+          emptyDir: {}
+      # Use Alibaba Cloud RAM Role for service account (recommended)
+      # serviceAccountName: estate-manager-sa
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - estate-manager
+                topologyKey: kubernetes.io/hostname
+      terminationGracePeriodSeconds: 30
