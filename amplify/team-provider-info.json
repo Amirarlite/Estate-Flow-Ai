@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-estateflowai-dev-16c65-authRole",
+      "UnauthRoleArn": "arn:aws:iam::826229823370:role/amplify-estateflowai-dev-16c65-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::826229823370:role/amplify-estateflowai-dev-16c65-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-estateflowai-dev-16c65-deployment",
+      "UnauthRoleName": "amplify-estateflowai-dev-16c65-unauthRole",
+      "StackName": "amplify-estateflowai-dev-16c65",
+      "StackId": "arn:aws:cloudformation:us-east-2:826229823370:stack/amplify-estateflowai-dev-16c65/d78186a0-613f-11f1-b80a-0a03bfba6c09",
+      "AmplifyAppId": "d2ya7cczugqmdo"
+    }
+  }
+}
