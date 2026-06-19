@@ -3,14 +3,16 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci --prefer-offline
+        - npm install
+        - npx expo install --fix
     build:
       commands:
-        - npm run build
+        - npx expo export --platform web
   artifacts:
     baseDirectory: dist
-    paths:
+    files:
       - '**/*'
   cache:
     paths:
       - node_modules/**/*
+      - .expo/**/*
